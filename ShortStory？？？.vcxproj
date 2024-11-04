@@ -130,11 +130,13 @@
     <ClInclude Include="..\べくたーもどき？？？？\MemoryAllocator.h" />
     <ClInclude Include="..\べくたーもどき？？？？\Vector.h" />
     <ClInclude Include="..\可変長引数？？\Type.h" />
+    <ClInclude Include="ShortStory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\べくたーもどき？？？？\MemoryAllocator.cpp" />
     <ClCompile Include="..\べくたーもどき？？？？\Vector.cpp" />
     <ClCompile Include="..\可変長引数？？\Type.cpp" />
+    <ClCompile Include="ShortStory.cpp" />
     <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,19 +1,6 @@
-#include <stdio.h>
+#include "ShortStory.h"
 
-#include "Vector.h"
-#include "Type.h"
-
-struct Story {
-	//type T = NULL;
-	typedef int T;
-	T Item;
-	VariadicArguments Arg;
-	//type R = NULL;
-	typedef int R;
-	R(*F)(T&, VariadicArguments&)=NULL;
-};
-
-template<class T,class R>
+template<class T, class R>
 Story ConstructStory(T& Item, VariadicArguments& Arg, R(*F)(T&, VariadicArguments&)) {
 	Story S;
 	S.Item = Item;
@@ -21,6 +8,7 @@ Story ConstructStory(T& Item, VariadicArguments& Arg, R(*F)(T&, VariadicArgument
 	S.F = F;
 	//S.T = T;
 	//S.R = R;
+
 	return S;
 }
 bool Free(Story& In) {
@@ -29,11 +17,6 @@ bool Free(Story& In) {
 
 	return true;
 }
-
-struct ShortStory {
-	Vector<Story> Storys;
-	VariadicArguments Arg;
-};
 
 ShortStory ConstructShortStory(Vector<Story>& V, VariadicArguments& Arg) {
 	ShortStory S;
